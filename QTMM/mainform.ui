@@ -1,0 +1,911 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>MainForm</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>MainForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>777</width>
+            <height>565</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>GLMadness Level Editor</string>
+    </property>
+    <widget class="CIGLWidget">
+        <property name="name">
+            <cstring>GLView</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>222</x>
+                <y>10</y>
+                <width>543</width>
+                <height>473</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy>
+                <hsizetype>7</hsizetype>
+                <vsizetype>7</vsizetype>
+                <horstretch>3</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+    </widget>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>tabView</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>10</y>
+                <width>200</width>
+                <height>250</height>
+            </rect>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Global/Level</string>
+            </attribute>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout17</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>10</y>
+                        <width>175</width>
+                        <height>205</height>
+                    </rect>
+                </property>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout14</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>CubeMap</string>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout13</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QLineEdit">
+                                        <property name="name">
+                                            <cstring>editCubeMap</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>7</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>4</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>24</width>
+                                                <height>24</height>
+                                            </size>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>LineEditPanel</enum>
+                                        </property>
+                                        <property name="frameShadow">
+                                            <enum>Sunken</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonBrowseCubeMap</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>1</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>24</width>
+                                                <height>24</height>
+                                            </size>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>24</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Browse Cube Map</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout6</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textGridSize</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Grid Size</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton">
+                                <property name="name">
+                                    <cstring>buttonEditGridSize</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>edit...</string>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout5</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel1_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Level Time (sec.)</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox">
+                                <property name="name">
+                                    <cstring>spinboxlevelTime</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>1800</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>10</number>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer3</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>16</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Ground Geometry</string>
+            </attribute>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout18</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>10</y>
+                        <width>175</width>
+                        <height>205</height>
+                    </rect>
+                </property>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout9</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel1_3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Special Cell Modes</string>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout7</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonSetAsStart</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Start</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonSetAsFinish</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="text">
+                                            <string>Finish</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout8</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonSetAsIce</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Ice</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonSetAsGlue</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Glue</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout17</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel1_4</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Smooth/Flatten</string>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout14</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonSmooth</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Classic s.</string>
+                                        </property>
+                                        <property name="toggleButton">
+                                            <bool>false</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonVsmooth</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Vertical s.</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout15</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonHsmooth</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Horizontal s.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>buttonFlatten</cstring>
+                                        </property>
+                                        <property name="backgroundOrigin">
+                                            <enum>WidgetOrigin</enum>
+                                        </property>
+                                        <property name="text">
+                                            <string>Flatten</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>buttonDropBall</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Drop Ball</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>110</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+        </widget>
+    </widget>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBar</cstring>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>40</width>
+            <height>22</height>
+        </size>
+    </property>
+    <item text="&amp;File" name="FileMenu">
+        <action name="fileNewAction"/>
+        <action name="fileOpenAction"/>
+        <action name="fileSaveAction"/>
+        <separator/>
+        <action name="fileExitAction"/>
+    </item>
+    <item text="&amp;Help" name="helpMenu">
+        <action name="helpAboutAction"/>
+    </item>
+    <item text="Menu" name="Menu">
+        <action name="viewResetTrack"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="label">
+            <string>Tools</string>
+        </property>
+        <action name="fileNewAction"/>
+        <action name="fileOpenAction"/>
+        <action name="fileSaveAction"/>
+        <action name="fileExitAction"/>
+        <action name="viewResetTrack"/>
+        <action name="editAction"/>
+        <action name="trackballAction"/>
+    </toolbar>
+</toolbars>
+<customwidgets>
+    <customwidget>
+        <class>CIGLWidget</class>
+        <header location="local">CIGLWidget.h</header>
+        <sizehint>
+            <width>-1</width>
+            <height>-1</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>5</hordata>
+            <verdata>5</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image0</pixmap>
+        <slot access="public" specifier="">slot()</slot>
+        <slot access="public" specifier="">setEditing(bool)</slot>
+        <slot access="public" specifier="">smooth()</slot>
+        <slot access="public" specifier="">slot()</slot>
+        <slot access="public" specifier="">flatten()</slot>
+    </customwidget>
+</customwidgets>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileNewAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>filenew</iconset>
+        </property>
+        <property name="text">
+            <string>New</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;New</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+N</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileOpenAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>fileopen</iconset>
+        </property>
+        <property name="text">
+            <string>Open</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Open...</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+O</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>filesave</iconset>
+        </property>
+        <property name="text">
+            <string>Save</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Save</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Save As</string>
+        </property>
+        <property name="menuText">
+            <string>Save &amp;As...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>exit.bmp</iconset>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpContentsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Contents</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Contents...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpIndexAction</cstring>
+        </property>
+        <property name="text">
+            <string>Index</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Index...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAboutAction</cstring>
+        </property>
+        <property name="text">
+            <string>About</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;About</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>viewResetTrack</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>home.png</iconset>
+        </property>
+        <property name="text">
+            <string>Reset TrackBall</string>
+        </property>
+        <property name="menuText">
+            <string>Reset TrackBall</string>
+        </property>
+    </action>
+    <actiongroup>
+        <property name="name">
+            <cstring>ActionGroup</cstring>
+        </property>
+        <property name="text">
+            <string>ActionGroup</string>
+        </property>
+        <property name="menuText">
+            <string>ActionGroup</string>
+        </property>
+        <property name="usesDropDown">
+            <bool>false</bool>
+        </property>
+        <action>
+            <property name="name">
+                <cstring>editAction</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="iconSet">
+                <iconset>arrow.bmp</iconset>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Action</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>trackballAction</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="on">
+                <bool>true</bool>
+            </property>
+            <property name="iconSet">
+                <iconset>track.bmp</iconset>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Action</string>
+            </property>
+        </action>
+    </actiongroup>
+</actions>
+<images>
+    <image name="image0">
+        <data format="XBM.GZ" length="79">789c534e494dcbcc4b554829cdcdad8c2fcf4c29c95030e0524611cd48cd4ccf28010a1797249664262b2467241641a592324b8aa363156c15aab914146aadb90067111b1f</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>fileNewAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileNew()</slot>
+    </connection>
+    <connection>
+        <sender>fileOpenAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileOpen()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileSave()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileExit()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>helpAbout()</slot>
+    </connection>
+    <connection>
+        <sender>buttonEditGridSize</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>editGridSize()</slot>
+    </connection>
+    <connection>
+        <sender>editAction</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>GLView</receiver>
+        <slot>setEditing(bool)</slot>
+    </connection>
+    <connection>
+        <sender>buttonBrowseCubeMap</sender>
+        <signal>clicked()</signal>
+        <receiver>MainForm</receiver>
+        <slot>chooseCubeMap()</slot>
+    </connection>
+    <connection>
+        <sender>editCubeMap</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainForm</receiver>
+        <slot>setCubeMap()</slot>
+    </connection>
+    <connection>
+        <sender>buttonSmooth</sender>
+        <signal>released()</signal>
+        <receiver>GLView</receiver>
+        <slot>smooth()</slot>
+    </connection>
+    <connection>
+        <sender>buttonFlatten</sender>
+        <signal>released()</signal>
+        <receiver>GLView</receiver>
+        <slot>flatten()</slot>
+    </connection>
+    <connection>
+        <sender>buttonDropBall</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>setBallPos()</slot>
+    </connection>
+    <connection>
+        <sender>buttonSmooth</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>smooth()</slot>
+    </connection>
+    <connection>
+        <sender>buttonFlatten</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>flatten()</slot>
+    </connection>
+    <connection>
+        <sender>buttonSetAsStart</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>setAsStart()</slot>
+    </connection>
+    <connection>
+        <sender>buttonSetAsFinish</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>setAsFinish()</slot>
+    </connection>
+    <connection>
+        <sender>buttonSetAsIce</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>setAsIce()</slot>
+    </connection>
+    <connection>
+        <sender>buttonSetAsGlue</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>setAsGlue()</slot>
+    </connection>
+    <connection>
+        <sender>buttonVsmooth</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>vSmooth()</slot>
+    </connection>
+    <connection>
+        <sender>buttonHsmooth</sender>
+        <signal>released()</signal>
+        <receiver>MainForm</receiver>
+        <slot>hSmooth()</slot>
+    </connection>
+    <connection>
+        <sender>viewResetTrack</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>resetTrackBall()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="global" impldecl="in declaration">QMessageBox.h</include>
+    <include location="global" impldecl="in declaration">QTimer.h</include>
+    <include location="global" impldecl="in declaration">QSpinbox.h</include>
+    <include location="local" impldecl="in declaration">initdialog.h</include>
+    <include location="global" impldecl="in declaration">gl/GLEW.h</include>
+    <include location="global" impldecl="in declaration">QGL.h</include>
+    <include location="global" impldecl="in declaration">qfiledialog.h</include>
+    <include location="global" impldecl="in declaration">MM/MMSG.h</include>
+    <include location="local" impldecl="in implementation">mainform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">vcg::MMSG sg;</variable>
+    <variable access="private">QTimer idleTimer;</variable>
+</variables>
+<slots>
+    <slot>fileNew()</slot>
+    <slot>fileOpen()</slot>
+    <slot>fileSave()</slot>
+    <slot>fileExit()</slot>
+    <slot>helpAbout()</slot>
+    <slot>editGridSize()</slot>
+    <slot>chooseCubeMap()</slot>
+    <slot>setCubeMap()</slot>
+    <slot>setBallPos()</slot>
+    <slot>smooth()</slot>
+    <slot>setAsStart()</slot>
+    <slot>setAsFinish()</slot>
+    <slot>setAsIce()</slot>
+    <slot>setAsGlue()</slot>
+    <slot>vSmooth()</slot>
+    <slot>hSmooth()</slot>
+    <slot>resetTrackBall()</slot>
+    <slot>flatten()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function>initSG()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>ciglwidget.h</includehint>
+</includehints>
+</UI>
