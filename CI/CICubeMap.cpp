@@ -1,10 +1,10 @@
-#include<gl/glew.h>
+#include<GL/glew.h>
 #include<vcg/Point3.h>
 #include<vcg/Matrix44.h>
 #include<string>
 
-#include<QImage.h>
-#include<QGL.h>
+#include <qimage.h>
+#include <QGL>
   
 using namespace vcg;
 using namespace std;

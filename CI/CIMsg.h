@@ -1,5 +1,4 @@
 #pragma once
-#include <QMessageBox.h>
 class CIMsg
 {
 	public:

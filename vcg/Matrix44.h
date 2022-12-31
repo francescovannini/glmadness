@@ -61,6 +61,8 @@ Quindi prima di passarle ad opengl si deve fare una transpose;
 #include <vcg/Point4.h>
 #endif
 
+#include <algorithm>
+
 namespace vcg {
 
 template <class FLTYPE> 

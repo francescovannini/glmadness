@@ -6,6 +6,9 @@
 #define MD2_MAX_FRAMES			512
 #define MD2_MAX_SKINS			32
 #define MD2_MAX_FRAMESIZE		(MD2_MAX_vert * 4 + 128)
+
+#include <string>
+
 class CIMd2
 {
 private: 

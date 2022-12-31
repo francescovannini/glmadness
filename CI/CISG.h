@@ -1,8 +1,8 @@
 #pragma once
 #include <list>
 #include <vcg/Matrix44.h>
-#include <QTextStream.h>
-#include <qdom.h> 
+#include <qtextstream.h>
+#include <qdom.h>
 namespace vcg {
 
 class CISG;

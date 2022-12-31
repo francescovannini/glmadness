@@ -8,8 +8,8 @@
 #include <vcg/Point3.h>
 #include <vcg/Matrix44.h>
 #include <vector>
-#include <QImage.h>
-#include <QGL.h>
+#include <qimage.h>
+#include <qgl.h>
 
 using namespace vcg;
 using namespace std;

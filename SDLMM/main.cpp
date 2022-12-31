@@ -6,13 +6,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <SDL.h>
-#include <QImage.h>
+#include <qimage.h>
 #include <qapplication.h>
-#include <QDom.h>
-#include <QFile.h>
-#include <QdateTime.h>
-#include <QDir.h>
-#include <QGL.h>
+#include <qdom.h>
+#include <qfile.h>
+#include <QDateTime>
+#include <QDir>
+#include <QGL>
 #include <vector>
 
 #include <vcg/Point3.h>

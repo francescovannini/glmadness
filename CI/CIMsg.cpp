@@ -1,5 +1,7 @@
 #include <GL/glew.h>
 #include <CI/CIMsg.h>
+#include <QString>
+#include <QMessageBox>
 
 void CIMsg::checkGLError(const char* m, const char* title) {
 

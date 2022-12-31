@@ -1,10 +1,10 @@
 #pragma once
 #include <vector>
-#include <vcg/point2.h>
-#include <vcg/plane3.h>
-#include <vcg/matrix44.h>
-#include <QString.h>
-#include <QTextStream.h>
+#include <vcg/Point2.h>
+#include <vcg/Plane3.h>
+#include <vcg/Matrix44.h>
+#include <QString>
+#include <QTextStream>
 #include <qdom.h> 
 
 #define TEXARRAYSIZE 6

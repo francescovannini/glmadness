@@ -1,9 +1,9 @@
 #include <GL/glew.h>
-#include <QImage.h>
-#include <QGL.h>
+#include <QImage>
+#include <QGL>
 #include <vcg/Point3.h>
-#include <QString.h>
-#include <QTextStream.h>
+#include <QString>
+#include <QTextStream>
 #include "MMGrid.h"
 
 using namespace std;
