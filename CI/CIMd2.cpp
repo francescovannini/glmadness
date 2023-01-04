@@ -142,46 +142,46 @@ bool	CIMd2::Load(const char *model_name, const char *new_tex_name)
 	
 	return true;
 }
-void	CIMd2:: DrawFrame(int curFrame)
-{
-	if(triangles.empty()) return;
-	if(ti==0) LoadTextures();
-		//ti=ilutGLLoadImage((ILstring) tex_name.c_str());
-
-	int i = 0;
-	int val = glcommands[i++];
-	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D,ti);
-	glColor3f(1.f, 1.f, 1.f);	
-
-	while (val != 0)
-	{
-		int count;
-
-		if (val > 0)		{
-			glBegin(GL_TRIANGLE_STRIP);
-			count = val;
-		}		else		{
-			glBegin(GL_TRIANGLE_FAN);
-			count = -val;
-		}
-
-		while (count--)
-		{
-			float s =  * (float *) &glcommands[i++];
-			float t =  * (float *) &glcommands[i++];
-			t=1.0f-t; // patch per rivoltare le texture
-			int index = glcommands[i++];
-
-			glTexCoord2f(s, t);
-			glNormal(frames[curFrame].vert[index].n);
-			glVertex(frames[curFrame].vert[index].v);			
-		}
-		glEnd ();
-
-		val = glcommands[i++];
-	}
-}
+//void	CIMd2:: DrawFrame(int curFrame)
+//{
+//	if(triangles.empty()) return;
+//	if(ti==0) LoadTextures();
+//		//ti=ilutGLLoadImage((ILstring) tex_name.c_str());
+//
+//	int i = 0;
+//	int val = glcommands[i++];
+//	glEnable(GL_TEXTURE_2D);
+//	glBindTexture(GL_TEXTURE_2D,ti);
+//	glColor3f(1.f, 1.f, 1.f);
+//
+//	while (val != 0)
+//	{
+//		int count;
+//
+//		if (val > 0)		{
+//			glBegin(GL_TRIANGLE_STRIP);
+//			count = val;
+//		}		else		{
+//			glBegin(GL_TRIANGLE_FAN);
+//			count = -val;
+//		}
+//
+//		while (count--)
+//		{
+//			float s =  * (float *) &glcommands[i++];
+//			float t =  * (float *) &glcommands[i++];
+//			t=1.0f-t; // patch per rivoltare le texture
+//			int index = glcommands[i++];
+//
+//			glTexCoord2f(s, t);
+//			glNormal(frames[curFrame].vert[index].n);
+//			glVertex(frames[curFrame].vert[index].v);
+//		}
+//		glEnd ();
+//
+//		val = glcommands[i++];
+//	}
+//}
 
 /////////////////////////////
 
