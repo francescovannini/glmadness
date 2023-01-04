@@ -13,6 +13,7 @@
 #include <QDateTime>
 #include <QDir>
 #include <QGL>
+#include <utility>
 #include <vector>
 
 #include <vcg/Point3.h>
@@ -241,7 +242,7 @@ void playLevel(QString levelfile){
 	int endTime;
 
 	/* Caricamento livello */
- 	sg.XMLRead(levelfile.data());
+ 	sg.XMLRead(std::move(levelfile));
 	sg.root.initializeGL();
 	sg.g->generateFace();
 	sg.g->setBallAtStart();
@@ -408,7 +409,7 @@ void drawChooseLevelMenu(QStringList files, int sel){
 	for (x=sel;((x<files.count()) && (c<8));x++){	
 		BMF_SetPos(px,py-c*15);
 		if (c>0) BMF_SetColor(0, 0, 0, 0.3f);
-		BMF_Print("%s",files.at(x).node->data.latin1());
+		BMF_Print("%s",files.at(x).toStdString().c_str());
 		c++;
 	}	
 	BMF_End();
@@ -428,7 +429,7 @@ bool chooseLevelMenu(QString &fn){
 
 	printf("Entering levels menu...\n");
 	
-	dirList=d.entryList("*.xml",0x002,0x00);
+	dirList=d.entryList(QStringList("*.xml"));
 	
 	while ((!menuDone) && (!gamequit)){
 		if(SDL_PollEvent(&evt)) {
@@ -462,7 +463,7 @@ bool chooseLevelMenu(QString &fn){
 	}
 	if (confirmed) {
 		fn="../levels/";
-		fn.append(dirList.at(selectedEntry).node->data.latin1());
+		fn.append(dirList.at(selectedEntry).toStdString().c_str());
 	}
 	printf("Exiting levels menu...\n");
 	return confirmed;
