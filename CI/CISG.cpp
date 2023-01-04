@@ -18,7 +18,7 @@ QTextStream& operator<< ( QTextStream& os, Point3f& m )
    os<< m[0] << " " << m[1] << " " << m[2]  << " " ;
 	 return os;
 }
-QTextIStream& operator>> ( QTextIStream& os, Point3f& m )
+QTextStream& operator>> ( QTextStream& os, Point3f& m )
 {
    os >> m[0] >>  m[1] >> m[2];
 	 return os;
@@ -239,7 +239,7 @@ void CISGAnimZPrecession::XMLWrite(QTextStream &xstrm)
 bool CISGAnimZPrecession::XMLRead(QDomElement n, CISG *)
 {
 	if(n.tagName() !="CISGAnimZPrecession" || !n.firstChild().isText()) return false;
-	QTextIStream(&n.text()) >> StartAngleDeg >> AngularSpeedDPS >> DeclinationDeg;
+	QTextStream(&n.text()) >> StartAngleDeg >> AngularSpeedDPS >> DeclinationDeg;
 	return true;
 }
 
