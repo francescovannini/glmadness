@@ -189,7 +189,7 @@ GLuint loadImage(QString filename){
 		gluBuild2DMipmaps(GL_TEXTURE_2D, 3, tx.width(), tx.height(), GL_RGBA, GL_UNSIGNED_BYTE, tx.bits());
 		return tex;
 	} else
-		fprintf(stderr,"%s image not found!\n",filename.latin1());
+		fprintf(stderr,"%s image not found!\n",filename.toStdString().c_str());
 	return 0;
 }
 

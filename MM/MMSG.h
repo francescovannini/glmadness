@@ -11,7 +11,7 @@ public:
 	virtual void XMLWrite(QTextStream &xstrm);
 	virtual bool XMLRead(QDomElement en, CISG *Base);
 	virtual void drawGL(const float );
-	virtual void  initializeGL(){Load(textureBaseName); dirty=false;}
+	virtual void  initializeGL(){Load(textureBaseName.toStdString().c_str()); dirty=false;}
 	QString textureBaseName;
 	bool dirty; // se c'e' bisogno di reinizializzare la cubemap (ad es. perche' e' cambiato il nome.)
 	Matrix44f rr; // la matrice di rotazione da applicare alla cubemap di solito si prende dallo sg.

@@ -129,7 +129,7 @@ bool CISGGroup::XMLRead(QDomElement en, CISG *Base)
     if( !e.isNull() ) {
 				CISGNode *np=Base->Allocate(e.tagName());
 				if(!np) return false;
-				cout << e.tagName().ascii() << endl; // the node really is an element.
+				cout << e.tagName().toStdString().c_str() << endl; // the node really is an element.
 				np->XMLRead(e,Base);
 				Sons.push_back(np);
        }
@@ -164,8 +164,8 @@ bool CISGRotation::XMLRead(QDomElement n, CISG *)
 {
 	if(n.tagName() !="CISGRotation" || !n.firstChild().isText() ) 
 		return false;
-	cout << n.tagName().ascii() << ":" << n.text().ascii() << endl;
-	QTextIStream(&n.text()) >> Axis >> AngleDeg;
+	cout << n.tagName().toStdString().c_str() << ":" << n.text().toStdString().c_str() << endl;
+	QTextStream(&n.text()) >> Axis >> AngleDeg;
   return true;
 }
 
@@ -179,8 +179,8 @@ void CISGScaling::XMLWrite(QTextStream &xstrm)
 bool CISGScaling::XMLRead(QDomElement n, CISG *)
 {
 	if(n.tagName() !="CISGScaling" || !n.firstChild().isText()) return false;
-	cout << n.tagName().ascii() << ":" << n.text().ascii() << endl;
-	QTextIStream(&n.text()) >> axis;
+	cout << n.tagName().toStdString().c_str() << ":" << n.text().toStdString().c_str() << endl;
+	QTextStream(&n.text()) >> axis;
 	return true;
 }
 /********** CISGTranslation *************/
@@ -194,8 +194,8 @@ void CISGTranslation::XMLWrite(QTextStream &xstrm)
 bool CISGTranslation::XMLRead(QDomElement n, CISG *)
 {
 	if(n.tagName() !="CISGTranslation" || !n.firstChild().isText()) return false;
-	cout << n.tagName().ascii() << ":" << n.text().ascii() << endl;
-	QTextIStream(&n.text()) >> V;
+	cout << n.tagName().toStdString().c_str() << ":" << n.text().toStdString().c_str() << endl;
+	QTextStream(&n.text()) >> V;
 	return true;
 }
 /********** CISGAnimRotation *************/

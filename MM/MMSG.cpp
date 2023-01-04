@@ -19,8 +19,8 @@ bool CICubeMapNode::XMLRead(QDomElement n, CISG *)
 {
 	if(n.tagName() !="CICubeMapNode" || !n.firstChild().isText() ) 
 		return false;
-	qDebug("< %s > %s ...\n",n.tagName().ascii(),n.text().ascii());
-	QTextIStream(&n.text()) >> textureBaseName;
+	qDebug("< %s > %s ...\n",n.tagName().toStdString().c_str(),n.text().toStdString().c_str());
+	QTextStream(&n.text()) >> textureBaseName;
   return true;
 }
 
@@ -56,7 +56,7 @@ bool CIGridNode::XMLRead(QDomElement en, CISG *)
 {
 	if(en.tagName() !="CIGridNode" || !en.firstChild().isText() )
 		return false;
-	qDebug("< %s > %s ...\n",en.tagName().ascii(),en.text().ascii());
+	qDebug("< %s > %s ...\n",en.tagName().toStdString().c_str(),en.text().toStdString().c_str());
 	sx = en.attribute("sx","10").toInt();
 	sy = en.attribute("sy","10").toInt();
 	time = en.attribute("time","60").toInt();
