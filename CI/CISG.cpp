@@ -63,7 +63,7 @@ CISGNode *CISG::Allocate(const QString &classname)
 bool CISG::XMLRead(QString filename)
 {
 	QFile qf(filename);
-  if ( !qf.open( IO_ReadOnly ) )   return false;
+  if ( !qf.open( QFile::ReadOnly ) )   return false;
 	bool ret=XMLRead(qf) ; 
 	qf.close();
 	return ret;
