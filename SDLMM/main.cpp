@@ -17,6 +17,34 @@
 #include <MM/MMSG.h>
 #include "../bmf/BMF_font.h"
 
+#if !defined(_WIN32) && !defined(_WIN64) // Linux - Unix
+#  include <sys/time.h>
+typedef timeval sys_time_t;
+inline void system_time(sys_time_t* t) {
+    gettimeofday(t, NULL);
+}
+inline long long time_to_msec(const sys_time_t& t) {
+    return t.tv_sec * 1000LL + t.tv_usec / 1000;
+}
+
+#else // Windows and MinGW
+#  include <sys/timeb.h>
+    typedef _timeb sys_time_t;
+    inline void system_time(sys_time_t* t) { _ftime(t); }
+    inline long long time_to_msec(const sys_time_t& t) {
+        return t.time * 1000LL + t.millitm;
+    }
+#endif
+
+inline int clock_ms(sys_time_t *iTime) {
+    sys_time_t t;
+    system_time(&t);
+    return (int) ((t.tv_sec * 1000LL + t.tv_usec / 1000) - (iTime->tv_sec * 1000LL + iTime->tv_usec / 1000));
+}
+
+using namespace vcg;
+using namespace std;
+
 GLuint menuTex,consoleTex,chooseLevelTex,creditsTex;
 MMSG sg;
 float rx,ry;
@@ -115,7 +143,7 @@ void drawConsole(int time){
 	BMF_End();
 }
 
-void DrawGLScene(int gs, int rtime)
+void DrawGLScene(int gs, int rtime, sys_time_t *iTime)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		
@@ -147,7 +175,7 @@ void DrawGLScene(int gs, int rtime)
 		glPushMatrix();
 		glRotatef(rx,0,1,0);
 		glScalef(scale,scale,scale);
-		sg.drawGL(clock()/1000.0f);
+		sg.drawGL(clock_ms());
 		glPopMatrix();
 	*/
 
@@ -156,7 +184,7 @@ void DrawGLScene(int gs, int rtime)
 	glRotatef(-ry,0,0,1);
 	glRotatef(rx,0,1,0);
 	glScalef(scale,scale,scale);
-	sg.drawGL(clock()/1000.0f);
+	sg.drawGL(clock_ms(iTime));
 	glPopMatrix();
 	
 	Enter2D();
@@ -242,8 +270,11 @@ void playLevel(QString levelfile){
 	int done = 0;
 	otime = 0;
 
+    sys_time_t initial_time;
+    system_time(&initial_time);
+
 	/* Istante nel quale finira' il tempo dello schema */
-	endTime=clock()/1000 + sg.g->time;
+	endTime= clock_ms(&initial_time) / 1000 + sg.g->time;
 
 	/* Zoom e rotazioni predefinite */
 	rx=135.0f;
