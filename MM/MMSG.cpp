@@ -64,7 +64,7 @@ bool CIGridNode::XMLRead(QDomElement en, CISG *)
 	resize(sx,sy);
 
 	vector<MMCell>::iterator ii;
-	QTextStream is(&en.text());
+	QTextStream is(en.text().toStdString().c_str());
 	for(ii=g.begin();ii!=g.end();++ii)
 		(*ii).XMLRead(is);
 	return true;
