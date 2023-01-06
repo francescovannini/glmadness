@@ -2,29 +2,19 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #endif
+
+#include <cstdio>
 #include <GL/glew.h>
-#include <stdlib.h>
-#include <time.h>
 #include <SDL.h>
 #include <qimage.h>
 #include <qapplication.h>
 #include <qdom.h>
-#include <qfile.h>
 #include <QDateTime>
 #include <QDir>
 #include <QGL>
 #include <utility>
-#include <vector>
-
 #include <vcg/Point3.h>
-#include <vcg/Matrix44.h>
-
-using namespace vcg;
-using namespace std;
-
-#include <CI/CISG.h>
 #include <MM/MMSG.h>
-
 #include "../bmf/BMF_font.h"
 
 GLuint menuTex,consoleTex,chooseLevelTex,creditsTex;
@@ -324,7 +314,7 @@ void playLevel(QString levelfile){
 
 		} else {  /* di if (SDL_PollEvent(&event)) */
 		
-			ctime=clock()/1000.0f;
+			ctime= clock_ms(&initial_time) / 1000.0f;
 					
 			if (gameState==0) {
 				rtime=endTime - ctime;
@@ -341,7 +331,7 @@ void playLevel(QString levelfile){
 				} 
 			}
 
-			DrawGLScene(gameState,rtime);
+			DrawGLScene(gameState,rtime, &initial_time);
 		}
   }
 }
