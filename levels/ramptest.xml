@@ -403,6 +403,6 @@
 0 0 0 0 0 
 </CIGridNode>
 <CICubeMapNode>
-C:/CI2004/MM_V1.1/MM/data/cubemaps/mount.jpg</CICubeMapNode>
+../data/cubemaps/mount.jpg</CICubeMapNode>
 </CISGGroup>
 </CISG>
