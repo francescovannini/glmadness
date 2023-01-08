@@ -8,14 +8,14 @@
 #include "CIGLWidget.h"
 #include "MM/MMSG.h"
 
-#include <QMessageBox.h>
-#include <QImage.h>
-#include <QdateTime.h>
+#include <QMessageBox>
+#include <QDateTime>
+#include <QMouseEvent>
 #include <qcursor.h>
 
 using namespace vcg;
 
-CIGLWidget::CIGLWidget( QWidget *parent, const char *name ): QGLWidget(parent, name)
+CIGLWidget::CIGLWidget( QWidget *parent): QGLWidget(parent)
 {
 	sg=0;
 	dirty=false;
@@ -117,7 +117,8 @@ void CIGLWidget::flatten()
 void CIGLWidget::paintGL()
 {
 	QTime tm;
-	
+	tm.restart();
+
 	if(dirty) 
 		{
 			initializeGL();
@@ -126,7 +127,7 @@ void CIGLWidget::paintGL()
 
 	if(animBall)
 		{
-			sg->g->updateSpherePos(tm.elapsed()/1000.0f);
+			sg->g->updateSpherePos(((float)tm.msecsSinceStartOfDay()) / 1000.0f);
 		}
 
 	glMatrixMode (GL_MODELVIEW);

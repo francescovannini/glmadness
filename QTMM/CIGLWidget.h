@@ -6,9 +6,9 @@
 
 #ifndef CIGLWIDGET_H
 #define CIGLWIDGET_H
-#include <gl/glew.h>
+#include <GL/glew.h>
 #include <qgl.h>
-#include <CI/CITrackball.h>
+#include <CI/CITrackBall.h>
 #include <MM/MMSG.h>
 
 
@@ -17,7 +17,7 @@ class CIGLWidget : public  QGLWidget
 	Q_OBJECT	
 
 public:
-	CIGLWidget( QWidget *parent=0, const char *name=0 );
+	CIGLWidget( QWidget *parent=0);
 	void initializeGL();
 	void resizeGL( int w, int h );
 	void paintGL();

@@ -1,149 +1,132 @@
-<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>InitDialog</class>
-<widget class="QDialog">
-    <property name="name">
-        <cstring>InitDialog</cstring>
-    </property>
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" stdsetdef="1">
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>InitDialog</class>
+  <widget class="QDialog" name="InitDialog">
     <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>4</y>
-            <width>194</width>
-            <height>78</height>
-        </rect>
+      <rect>
+        <x>0</x>
+        <y>4</y>
+        <width>194</width>
+        <height>78</height>
+      </rect>
     </property>
     <property name="sizePolicy">
-        <sizepolicy>
-            <hsizetype>0</hsizetype>
-            <vsizetype>0</vsizetype>
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-        </sizepolicy>
+      <sizepolicy>
+        <hsizetype>0</hsizetype>
+        <vsizetype>0</vsizetype>
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+      </sizepolicy>
     </property>
-    <property name="caption">
-        <string>Select Grid Dimension</string>
+    <property name="windowTitle">
+      <string>Select Grid Dimension</string>
     </property>
     <property name="sizeGripEnabled">
-        <bool>false</bool>
+      <bool>false</bool>
     </property>
-    <vbox>
-        <property name="name">
-            <cstring>unnamed</cstring>
-        </property>
-        <property name="resizeMode">
-            <enum>Fixed</enum>
-        </property>
-        <widget class="QLayoutWidget">
-            <property name="name">
-                <cstring>layout7</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QLabel">
-                    <property name="name">
-                        <cstring>textLabel1</cstring>
-                    </property>
-                    <property name="text">
-                        <string>X size</string>
-                    </property>
-                    <property name="buddy" stdset="0">
-                        <cstring>spinBoxXSize</cstring>
-                    </property>
-                </widget>
-                <widget class="QSpinBox">
-                    <property name="name">
-                        <cstring>spinBoxXSize</cstring>
-                    </property>
-                    <property name="value">
-                        <number>10</number>
-                    </property>
-                </widget>
-                <widget class="QLabel">
-                    <property name="name">
-                        <cstring>textLabel1_2</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Y Size</string>
-                    </property>
-                    <property name="buddy" stdset="0">
-                        <cstring>spinBoxYSize</cstring>
-                    </property>
-                </widget>
-                <widget class="QSpinBox">
-                    <property name="name">
-                        <cstring>spinBoxYSize</cstring>
-                    </property>
-                    <property name="value">
-                        <number>10</number>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
-        <widget class="QLayoutWidget">
-            <property name="name">
-                <cstring>Layout1</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <property name="margin">
-                    <number>0</number>
-                </property>
-                <property name="spacing">
-                    <number>6</number>
-                </property>
-                <widget class="QPushButton">
-                    <property name="name">
-                        <cstring>buttonOk</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;OK</string>
-                    </property>
-                    <property name="accel">
-                        <string></string>
-                    </property>
-                    <property name="autoDefault">
-                        <bool>true</bool>
-                    </property>
-                    <property name="default">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <widget class="QPushButton">
-                    <property name="name">
-                        <cstring>buttonCancel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Cancel</string>
-                    </property>
-                    <property name="accel">
-                        <string></string>
-                    </property>
-                    <property name="autoDefault">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
-    </vbox>
-</widget>
-<connections>
+    <layout class="QVBoxLayout">
+      <item>
+        <layout class="QHBoxLayout">
+          <item>
+            <widget class="QLabel" name="textLabel1">
+              <property name="text">
+                <string>X size</string>
+              </property>
+              <property name="buddy" stdset="0">
+                <cstring>spinBoxXSize</cstring>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QSpinBox" name="spinBoxXSize">
+              <property name="value">
+                <number>10</number>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLabel" name="textLabel1_2">
+              <property name="text">
+                <string>Y Size</string>
+              </property>
+              <property name="buddy" stdset="0">
+                <cstring>spinBoxYSize</cstring>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QSpinBox" name="spinBoxYSize">
+              <property name="value">
+                <number>10</number>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <layout class="QHBoxLayout">
+          <property name="margin">
+            <number>0</number>
+          </property>
+          <property name="spacing">
+            <number>6</number>
+          </property>
+          <item>
+            <widget class="QPushButton" name="buttonOk">
+              <property name="text">
+                <string>&amp;OK</string>
+              </property>
+              <property name="shortcut">
+                <string/>
+              </property>
+              <property name="autoDefault">
+                <bool>true</bool>
+              </property>
+              <property name="default">
+                <bool>true</bool>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="buttonCancel">
+              <property name="text">
+                <string>&amp;Cancel</string>
+              </property>
+              <property name="shortcut">
+                <string/>
+              </property>
+              <property name="autoDefault">
+                <bool>true</bool>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11"/>
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+  <connections>
     <connection>
-        <sender>buttonOk</sender>
-        <signal>clicked()</signal>
-        <receiver>InitDialog</receiver>
-        <slot>accept()</slot>
+      <sender>buttonOk</sender>
+      <signal>clicked()</signal>
+      <receiver>InitDialog</receiver>
+      <slot>accept()</slot>
     </connection>
     <connection>
-        <sender>buttonCancel</sender>
-        <signal>clicked()</signal>
-        <receiver>InitDialog</receiver>
-        <slot>reject()</slot>
+      <sender>buttonCancel</sender>
+      <signal>clicked()</signal>
+      <receiver>InitDialog</receiver>
+      <slot>reject()</slot>
     </connection>
-</connections>
-<pixmapinproject/>
-<layoutdefaults spacing="6" margin="11"/>
-</UI>
+  </connections>
+</ui>
